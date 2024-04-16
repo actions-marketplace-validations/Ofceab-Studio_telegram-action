@@ -1,5 +1,5 @@
-name: 'Telegram Message Notify'
-description: 'Sending a Telegram message'
+name: 'Telegram Message Notify (Forked from telegram-action)'
+description: 'Sending a Telegram message with support of thread_id'
 author: 'Bo-Yi Wu'
 inputs:
   to:
