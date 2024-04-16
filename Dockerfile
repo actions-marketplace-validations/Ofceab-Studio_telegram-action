@@ -1,4 +1,4 @@
-FROM ofceab/drone-telegram-forked:1.0.0
+FROM ofceab/drone-telegram-forked
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
