@@ -12,6 +12,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        thread_id: ${{ secrets.TELEGRAM_THREAD }}
         args: The ${{ github.event_name }} event triggered first step.
 
     - name: send message using with
@@ -19,6 +20,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        thread_id: ${{ secrets.TELEGRAM_THREAD }}
         message: |
           The ${{ github.event_name }} event triggered second step.
           show the github variable ref: ${{ github.ref }}
@@ -32,12 +34,15 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        thread_id: ${{ secrets.TELEGRAM_THREAD }}
+
 
     - name: send photo message
       uses: ./
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        thread_id: ${{ secrets.TELEGRAM_THREAD }}
         message: send photo message
         photo: './tests/github.png'
         document: './tests/gophercolor.png'
@@ -47,6 +52,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        thread_id: ${{ secrets.TELEGRAM_THREAD }}
         location: '24.9163213 121.1424972'
         venue: '35.661777 139.704051 竹北體育館 新竹縣竹北市'
 
@@ -55,6 +61,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        thread_id: ${{ secrets.TELEGRAM_THREAD }}
         message: |
           The ${{ github.event_name }} event triggered final step.
           echo This event is a pull request that had an assignee removed.
@@ -64,6 +71,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        thread_id: ${{ secrets.TELEGRAM_THREAD }}
         message_file: tests/message.txt
 
     # - name: send message using socks5 proxy URL
@@ -89,6 +97,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        thread_id: ${{ secrets.TELEGRAM_THREAD }}
         message: |
           show link preview https://google.com.tw
 
@@ -97,6 +106,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        thread_id: ${{ secrets.TELEGRAM_THREAD }}
         disable_web_page_preview: true
         message: |
           disable link preview https://google.com.tw
@@ -106,6 +116,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
+        thread_id: ${{ secrets.TELEGRAM_THREAD }}
         disable_notification: true
         message: |
           disable link preview https://google.com.tw
