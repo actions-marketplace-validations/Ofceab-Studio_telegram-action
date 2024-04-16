@@ -25,6 +25,7 @@ jobs:
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
+          thread_id: ${{ secrets.TELEGRAM_THREAD }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             ${{ github.actor }} created commit:
@@ -42,6 +43,8 @@ Remove `args` to send the default message.
   uses: appleboy/telegram-action@master
   with:
     to: ${{ secrets.TELEGRAM_TO }}
+    # Optional 
+    thread_id: ${{ secrets.TELEGRAM_THREAD }}
     token: ${{ secrets.TELEGRAM_TOKEN }}
 ```
 
