@@ -4,6 +4,8 @@ author: 'Bo-Yi Wu'
 inputs:
   to:
     description: 'telegram user'
+  thread_id:
+    description: 'telegram topic id'
   token:
     description: 'telegram token'
   message:
